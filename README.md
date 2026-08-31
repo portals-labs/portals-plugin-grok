@@ -18,6 +18,23 @@ is a self-contained bundle that needs Node 18+ and no package-install step.
 Disable any Claude-compatible Portals plugin in Grok before enabling this native package; both
 expose the same skill and MCP server names.
 
+## Network and credentials
+
+The MCP server connects to `https://portals.to` for account and game operations. Transfer tools
+also use time-limited upload or download URLs returned by that API and the Portals-managed asset
+hosts `cdn.theportal.to`, `addressables-cdn.theportal.to`,
+`d365bxku1h71bo.cloudfront.net`, and `dwh7ute75zx34.cloudfront.net`. Browser sign-in opens
+`https://portals.to/mcp`, serves its callback on the local loopback interface, and may load its
+background from `https://cdn.theportal.to`.
+
+Authentication uses `PORTALS_ACCESS_KEY` when set, otherwise a saved key at
+`~/.portals-mcp/auth.json`, or the interactive `authenticate` tool. A successful interactive
+login stores the key in that file for later sessions. `API_BASE` is an optional backend override;
+when set, both API calls and browser sign-in use that origin. Tool calls can read or write the game
+project paths passed to them; push, publish, and asset-upload operations transmit those selected
+project or media files. The server does not crawl unrelated directories or transmit unrelated
+environment variables.
+
 Refresh a later release with `grok plugin marketplace update`, then
 `grok plugin update portals-plugin-grok`.
 
