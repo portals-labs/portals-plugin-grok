@@ -1,0 +1,20 @@
+{
+  "name": "portals-plugin-grok",
+  "version": "0.1.14",
+  "description": "Build, manage, and publish Portals browser games from Grok Build.",
+  "author": {
+    "name": "Portals",
+    "url": "https://portals.to/"
+  },
+  "homepage": "https://portals.to/my-games",
+  "repository": "https://github.com/portals-labs/portals-plugin-grok",
+  "license": "ISC",
+  "keywords": [
+    "portals",
+    "browser-games",
+    "multiplayer",
+    "game-development",
+    "mcp"
+  ],
+  "logo": "assets/portals-icon.png"
+}

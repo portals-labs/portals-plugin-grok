@@ -1,0 +1,28 @@
+{
+  "name": "portals",
+  "description": "Grok Build plugin for building browser games on Portals.",
+  "owner": {
+    "name": "Portals",
+    "url": "https://portals.to/"
+  },
+  "plugins": [
+    {
+      "name": "portals-plugin-grok",
+      "description": "Build, manage, and publish Portals browser games from Grok Build.",
+      "category": "development",
+      "source": {
+        "type": "local",
+        "path": "./plugins/portals-plugin-grok"
+      },
+      "homepage": "https://portals.to/my-games",
+      "keywords": [
+        "portals",
+        "portals browser games",
+        "portals game development"
+      ],
+      "domains": [
+        "portals.to"
+      ]
+    }
+  ]
+}
