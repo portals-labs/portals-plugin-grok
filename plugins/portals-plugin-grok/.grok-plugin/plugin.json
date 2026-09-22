@@ -1,6 +1,6 @@
 {
   "name": "portals-plugin-grok",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Build, manage, and publish Portals browser games from Grok Build.",
   "author": {
     "name": "Portals",
