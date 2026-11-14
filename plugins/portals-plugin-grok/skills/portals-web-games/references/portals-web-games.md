@@ -336,7 +336,7 @@ Every generated asset must ship inside the bundle and be referenced by a path re
   <img src="./assets/ship.png">        // yes
   <img src="https://cdn.theportal.to/ai-images/...">  // blocked on Portals
 
-A published game is served under img-src 'self' / connect-src 'self' / media-src 'self', so the CDN URL a generator returns loads on a local dev server and then fails on Portals — the exact bug that looks like "it worked yesterday". The tools save the file for this reason; keep it in the pushed directory and never fetch an asset URL at runtime. Generated files count against the bundle limits (500 files, 50 MB per file, 100 MB total), so mind the size of music tracks and hero models.
+A published game is served under img-src 'self' / connect-src 'self' / media-src 'self', so the CDN URL a generator returns loads on a local dev server and then fails on Portals — the exact bug that looks like "it worked yesterday". The tools save the file for this reason; keep it in the pushed directory and never fetch an asset URL at runtime. Generated files count against the local upload limits (500 files, 256 MiB per file, 512 MiB total; ZIP uploads up to 600 MiB), so mind the size of music tracks and hero models.
 
 Generation costs credits and cannot be undone, so prefer reusing what is already there: check list_generated_assets before generating another variant, and re-prompt rather than regenerate in a loop. A texture is 3 credits, an image 20, a sound effect 20, speech 45 per 1,000 characters, music 70 per minute, a 3D model 60–75.
 
